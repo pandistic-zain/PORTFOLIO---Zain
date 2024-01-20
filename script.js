@@ -1,5 +1,5 @@
-(function(){ 
-  "use strict"
+(function() { 
+  "use strict";
   function addRecommendation() {
     // Get the message of the new recommendation
     let recommendation = document.getElementById("new_recommendation");
