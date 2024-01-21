@@ -37,7 +37,7 @@ body {
 }
 .profile_name {
   float: left;
-  margin-top: -1cm; /* Adjusted from padding-top */
+  margin-top: 0cm; /* Adjusted from padding-top */
   padding-left: 2cm;
   font-size: 2rem;
   color: #dad7cd;

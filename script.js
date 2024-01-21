@@ -47,18 +47,16 @@
   }
   const PopUpButton = document.getElementById('popupBtn');
   PopUpButton.addEventListener('click', () => {
-    showPopup(true); // Pass true to show the popup
+    showPopup(false);  
   });
-  
+  // Function to show or hide the popup
   function showPopup(bool) {
-    const popupElement = document.getElementById("popup");
     if (bool) {
-      popupElement.style.display = "block";
+      document.getElementById("popup").style.visibility = "visible";
     } else {
-      popupElement.style.display = "none";
+      document.getElementById("popup").style.visibility = "hidden";
     }
   }
-  
 
 // Get the icon button and add a click event listener
 const iconButton = document.querySelector('.iconbutton a');
