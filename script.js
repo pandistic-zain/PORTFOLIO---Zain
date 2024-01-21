@@ -2,23 +2,24 @@
   "use strict";
   // Wait for the DOM to be ready
   document.addEventListener("DOMContentLoaded", function () {
-    // Function to handle custom behavior on button click and navigation link click
-    const handleCustomBehavior = (event) => {
-      event.preventDefault();
-      const targetId = event.target.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
+    // Select all links with hashes
+    const links = document.querySelectorAll('a[href*="#"]');
 
-      const offsetTop = targetElement.offsetTop;
+    // Loop through each link and add smooth scroll
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
 
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: "smooth",
+          });
+        }
       });
-    };
-
-    // Add click event listener to each navigation link
-    document.querySelectorAll(".topmenu").forEach((link) => {
-      link.addEventListener("click", handleCustomBehavior);
     });
     const recommendationButton = document.getElementById("recommend_btn");
     recommendationButton.addEventListener("click", addRecommendation);
@@ -61,23 +62,6 @@
       }
     }
 
-    // Get the icon button and add a click event listener
-    const iconButton = document.querySelector(".iconbutton a");
-    iconButton.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      // Get the target ID and element
-      const targetId = e.target.getAttribute("href").slice(1);
-      const targetElement = document.getElementById(targetId);
-
-      // Scroll to the target element with a smooth behavior
-      const offsetTop =
-        targetElement.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-    });
     // Personal-Logo handling
     const Instagram = document.getElementById("Instagram");
     const Linkdin = document.getElementById("Linkdin");
@@ -93,12 +77,12 @@
         "https://www.linkedin.com/in/zain-ul-abideen-b9215a283/";
     });
     FaceBook.addEventListener("click", function () {
-      window.location.href = "https://web.facebook.com/people/Zain-Ul-Abideen/pfbid0FJxkLMyyVtNkMdvpek9fNgMdk9KeZKaiAZzSmQAhtnB6Ykytov1ojv5Psqay9AcMl/";
+      window.location.href =
+        "https://web.facebook.com/people/Zain-Ul-Abideen/pfbid0FJxkLMyyVtNkMdvpek9fNgMdk9KeZKaiAZzSmQAhtnB6Ykytov1ojv5Psqay9AcMl/";
     });
 
     WhatsApp.addEventListener("click", function () {
-      window.location.href =
-        "https://wa.me/+923245995192";
+      window.location.href = "https://wa.me/+923245995192";
     });
   });
 })();
