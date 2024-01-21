@@ -19,7 +19,8 @@
   document.querySelectorAll(".topmenu").forEach((link) => {
     link.addEventListener("click", handleCustomBehavior);
   });
-
+  const recommendationButton = document.getElementById('recommend_btn');
+  recommendationButton.addEventListener('click',addRecommendation);
   // Function to add a new recommendation
   function addRecommendation() {
     // Get the message of the new recommendation
