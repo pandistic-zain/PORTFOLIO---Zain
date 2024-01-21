@@ -45,15 +45,20 @@
       recommendation.value = "";
     }
   }
-
-  // Function to show or hide the popup
+  const PopUpButton = document.getElementById('popupBtn');
+  PopUpButton.addEventListener('click', () => {
+    showPopup(true); // Pass true to show the popup
+  });
+  
   function showPopup(bool) {
+    const popupElement = document.getElementById("popup");
     if (bool) {
-      document.getElementById("popup").style.visibility = "visible";
+      popupElement.style.display = "block";
     } else {
-      document.getElementById("popup").style.visibility = "hidden";
+      popupElement.style.display = "none";
     }
   }
+  
 
 // Get the icon button and add a click event listener
 const iconButton = document.querySelector('.iconbutton a');
