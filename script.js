@@ -1,6 +1,7 @@
 (function () {
   "use strict";
-
+// Wait for the DOM to be ready
+document.addEventListener("DOMContentLoaded", function () {
   // Function to handle custom behavior on button click and navigation link click
   const handleCustomBehavior = (event) => {
     event.preventDefault();
@@ -73,6 +74,17 @@ iconButton.addEventListener('click', (e) => {
     top: offsetTop,
     behavior: 'smooth',
   });
+      // Personal-Logo handling
+      const Instagram = document.getElementById("Instagram");
+      const Linkdin = document.getElementById("Linkdin");
+  
+      Instagram.addEventListener("click", function () {
+        window.location.href = "https://www.instagram.com/pandistic._.zain/";
+      });
+  
+      Linkdin.addEventListener("click", function () {
+        window.location.href = "https://www.linkedin.com/in/zain-ul-abideen-b9215a283/";
+      });
 });
-
+});
 })();

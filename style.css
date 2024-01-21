@@ -87,6 +87,7 @@ h2 {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 /* About Me */
@@ -346,7 +347,7 @@ footer {
   display: flex;
   float: right;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 40px;
   height: 100%;
 }
 .personal-logos img {
