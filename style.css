@@ -156,6 +156,12 @@ h2 {
   margin-block-end: 5px;
   font-style: italic;
 }
+.skill:hover{
+background: #d4d4d4;
+cursor: pointer;
+box-shadow:0 4px 12px #588157;
+transform: scale(1.1);
+}
 
 .flex_center {
   display: flex;
